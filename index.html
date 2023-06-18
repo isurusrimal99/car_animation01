@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car_Animation</title>
+
+    <style>
+
+        .sky{
+            width: 100%;
+            height: 100%;
+            background-image: url("assets/pictures/sky.jpg");
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+        }
+
+        .city{
+            width:300%;
+            height: 300px;
+            background-image: url("assets/pictures/city.png");
+            background-repeat:no-repeat;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            right: 0;
+            bottom: 180px;
+            margin: auto;
+            animation-name: city;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-play-state: running;
+            animation-iteration-count: infinite;
+            animation-direction:initial;
+            animation-fill-mode: backwards;
+            animation-timing-function: linear;
+
+            overflow-x: hidden;
+            overflow-y: hidden;
+
+        }
+
+        .road{
+            width: 300%;
+            height: 250px;
+            background-image: url("assets/pictures/road.jpg");
+            background-repeat:no-repeat;
+            position: absolute;
+            top: 270px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            animation-name: road;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-play-state: running;
+            animation-iteration-count: infinite;
+            animation-direction:initial;
+            animation-fill-mode: backwards;
+            animation-timing-function: linear;
+
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .car{
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 250px;
+            left: 300px;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+            overflow-x: hidden;
+            overflow-y: hidden;
+
+        }
+
+        .wheel{
+            position: relative;
+            background-image: url(assets/pictures/wheel.png);
+            width: 75px;
+            height: 75px;
+            background-size: 75px;
+            background-repeat: no-repeat;
+            top: 320px;
+            left: 325px;
+
+            animation-name: wheel;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-duration: 20s;
+            animation-delay: 2s;
+        }
+
+        .wheel2{
+            position: relative;
+            background-image: url(assets/pictures/wheel.png);
+            width: 75px;
+            height: 75px;
+            background-size: 75px;
+            background-repeat: no-repeat;
+            top: 240px;
+            left: 570px;
+
+            animation-name: wheel;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-duration: 20s;
+            animation-delay: 2s;
+
+        }
+
+        @keyframes city {
+            from{
+                margin-left: 0;
+
+            }
+            to{
+                margin-left: 50px;
+
+            }
+
+            100%{
+                transform: translateX(-200px);
+            }
+        }
+
+
+        @keyframes road {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -1500px;
+            }
+            100%{
+                transform: translateX(-500px);
+            }
+        }
+        @keyframes wheel {
+            from{
+                transform:rotate(-1000deg);
+            }
+            to{
+                transform: rotate(1000deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<main>
+    <section>
+        <div class="sky"></div>
+        <div class="city">
+            <!--            <div class="city2"></div>-->
+        </div>
+        <div class="road"></div>
+        <div class="car">
+            <img src="../assets/pictures/car.png" width="400" height="150">
+        </div>
+        <div class="wheel">
+        </div>
+        <div class="wheel2">
+        </div>
+    </section>
+</main>
+</body>
+</html>
